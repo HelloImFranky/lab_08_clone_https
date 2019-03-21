@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    var numbTrees = prompt("How many trees would you like?\n"
+    + "Choose a value between 1-6")
+
+      numbTrees=parseInt(numbTrees)
+
+      var trees= 0
+
+      if (numbTrees>6){
+        console.log("Try again");
+          }
+          else {
+
+      var loop = function (){
+
+            while (trees<numbTrees){
+        console.log("\xa0\xa0\xa0\xa0/\\\xa0\n" +
+        "\xa0\xa0\xa0/\xa0\xa0\\\n" +
+        "\xa0\xa0\xa0/\xa0\xa0\\\n" +
+        "\xa0\xa0/\xa0\xa0\xa0\xa0\\\n" +
+        "\xa0\xa0\xa0\xa0||\xa0\xa0\xa0\xa0");
+        (trees++);
+
+        }
+      }
+      loop();
+    }
+      </script>
+  </body>
+</html>

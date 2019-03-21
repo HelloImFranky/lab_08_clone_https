@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    
+  //Choices and decisions
+  var wndResp = prompt("Do you want windows on your house?");
+  var drResp = prompt("Do you want a door on your house?");
+  var chmnResp = prompt("Do you want a chimney on your house?");
+
+while wndResp=="Yes" {
+   wndResp=(wndResp == true);
+}
+while (drResp=="Yes") {
+   drResp=(drResp == true);
+}
+while (chmnResp=="Yes") {
+   chmnResp=(chmnResp == true);
+}
+ if (jointRslts=={wndResp:"Yes"&& drResp:"Yes"&&  chmnResp:"Yes"}) {
+          console.log(
+            "\xa0\xa0\xa0\xa0/\\\xa0||\n"
+          + "\xa0\xa0\xa0/\xa0\xa0\\||\n"
+          + "\xa0\xa0/\xa0\xa0\xa0\xa0||\n"
+          + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+          + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+          + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+          + "|\xa0\xa0o\xa0\xa0o\xa0\xa0|\n"
+          + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+          + "|\xa0\xa0\xa0\xa0_\xa0\xa0\xa0|\n"
+          + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|\n"
+          + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|");
+        }
+          else if (jointRslts=={wndResp:"No"||drResp: "No"||chmnResp: "Yes"}) {
+          console.log(hsNoWndDr);
+            }
+            else if (jointRslts=={wndResp: "No", drResp: "Yes", chmnResp: "No"}){
+             console.log(hsNoWndChmn);
+              }
+              else if (jointRslts={wndResp: "Yes", drResp: "No", chmnResp: "No"}) {
+                console.log(hsNoDrChmn);
+                }
+                  else if (jointRslts=={wndResp: "Yes", drResp: "Yes", chmnResp: "No"}) {
+                    console.log(hsNoChmn);
+                  }
+                    else if (jointRslts=={wndResp: "Yes", drResp: "No", chmnResp: "Yes"}) {
+              console.log(hsNoDr);
+                    }
+                      else if (jointRslts=={wndResp: "No", drResp: "Yes", chmnResp: "Yes"}) {
+                        console.log(hsNoWnd);
+                        }
+            else
+          console.log("Not a valid input, try again");
+
+
+{
+
+//House with no windows - includes door and chimney
+    var hsNoWnd = ("\xa0\xa0\xa0\xa0/\\\xa0||\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\||\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0||\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0_\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|");
+
+//House with no door - includes window and chimney
+    var hsNoDr = ("\xa0\xa0\xa0\xa0/\\\xa0||\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\||\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0||\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0o\xa0\xa0o\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|");
+
+  //House with no chimney - includes window and door
+    var hsNoChmn = ("\xa0\xa0\xa0\xa0/\\\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0\\\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0o\xa0\xa0o\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0_\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|");
+
+  //House with no windows and no doors
+    var hsNoWndDr = ("\xa0\xa0\xa0\xa0/\\\xa0||\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\||\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0||\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|");
+
+  //House with no windows and no chimney
+    var hsNoWndChmn = ("\xa0\xa0\xa0\xa0/\\\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0\\\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0_\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0|\xa0|\xa0\xa0|");
+
+  //House with no doors and chimney
+    var hsNoDrChmn = ("\xa0\xa0\xa0\xa0/\\\n"
+    + "\xa0\xa0\xa0/\xa0\xa0\\\n"
+    + "\xa0\xa0/\xa0\xa0\xa0\xa0\\\n"
+    + "\xa0/\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "/\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\\\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0o\xa0\xa0o\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|\n"
+    + "|\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0|");
+    }
+
+    */
+      </script>
+
+  </body>
+</html>
